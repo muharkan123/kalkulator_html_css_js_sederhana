@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Program Kalkulator Sederhana - HTML CSS JS</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="kalkulator">
+        <form action="" class="output">
+          <input type="text" id="hasil" placeholder="0" />
+        </form>
+        <section class="button">
+          <div class="tombolkiri">
+            <button class="tombol1" onclick="display('clear')">AC</button>
+            <button class="tombol1" onclick="display('del')">DEL</button>
+            <button class="tombol1" onclick="display('%')">%</button>
+            <script language="JavaScript">
+              for (let i = 9; i >= 1; i--) {
+                const button = document.createElement("button");
+                button.className = "tombol";
+                button.textContent = i.toString();
+                button.onclick = () => display(i.toString());
+                document.querySelector(".tombolkiri").appendChild(button);
+              }
+            </script>
+            <button class="tombol1" ></button>
+            <button class="tombol" onclick="display('0')">0</button>
+            <button class="tombol1" ></button>
+          </div>
+          <div class="tombolkanan">
+            <button class="tombol2" onclick="display('/')">:</button>
+            <button class="tombol2" onclick="display('*')">X</button>
+            <button class="tombol2" onclick="display('-')">-</button>
+            <button class="tombol2" onclick="display('+')">+</button>
+            <button class="tombol2" onclick="display('action')">=</button>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="javascript.js"></script>
+  </body>
+</html>
